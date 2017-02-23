@@ -4,5 +4,6 @@ public class CarSeller {
 
     public String describeMeThisCar(Car car) {
 
+        return "";
     }
 }
