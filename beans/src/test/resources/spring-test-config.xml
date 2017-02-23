@@ -1,0 +1,19 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+    http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.3.xsd
+	">
+
+
+    <bean id="otherBean" class="workshop.spring.showcase.BeanInitializedInXML">
+        <constructor-arg ref="emailGenerator"/>
+        <property name="description" value="test description"/>
+    </bean>
+
+    <bean id="emailGenerator" class="workshop.spring.showcase.EmailGenerator"/>
+
+</beans>
