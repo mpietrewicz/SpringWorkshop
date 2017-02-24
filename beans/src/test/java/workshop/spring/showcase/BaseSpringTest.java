@@ -10,11 +10,11 @@ import org.testng.annotations.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @Test
-@ContextConfiguration(classes = BaseSpringTest.TestConfig.class)
+@ContextConfiguration
 public class BaseSpringTest extends AbstractTestNGSpringContextTests {
 
     @Configuration
-    @ComponentScan
+    @ComponentScan(basePackages = "workshop.spring.showcase")
     public static class TestConfig{
     }
 
